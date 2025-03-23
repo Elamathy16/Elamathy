@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP CRUD Application</title>
+</head>
+<body>
+
+<h1>Task Management</h1>
+
+<!-- Create Task Form -->
+<h2>Create Task</h2>
+<form action="create.php" method="POST">
+    <label for="name">Task Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" required></textarea><br><br>
+    <input type="submit" value="Create Task">
+</form>
+
+<!-- List All Tasks -->
+<h2>Tasks</h2>
+<?php
+// Include the read.php file to display tasks
+include('read.php');
+?>
+
+<!-- Update Task Form (Will need ID to update specific task) -->
+<h2>Update Task</h2>
+<form action="update.php" method="POST">
+    <label for="id">Task ID:</label><br>
+    <input type="number" id="id" name="id" required><br><br>
+    <label for="name">New Task Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="description">New Description:</label><br>
+    <textarea id="description" name="description" required></textarea><br><br>
+    <input type="submit" value="Update Task">
+</form>
+
+<!-- Delete Task Form -->
+<h2>Delete Task</h2>
+<form action="delete.php" method="GET">
+    <label for="id">Task ID to Delete:</label><br>
+    <input type="number" id="id" name="id" required><br><br>
+    <input type="submit" value="Delete Task">
+</form>
+
+</body>
+</html>
