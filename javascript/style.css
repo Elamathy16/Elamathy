@@ -1,0 +1,26 @@
+html{
+    background-color:indigo;
+}
+.Black
+{
+    background-color:black;
+}
+body
+{
+   background-color:white ;
+   height: 800px;
+   width:800px;
+   margin:20px auto ;
+}
+.Box{
+    
+    float:left;
+    font-size:60px;
+    text-align: center;
+    height: 100px;
+    width:100px;
+    color:grey;
+}
+.w{
+    color:hotpink;
+}
